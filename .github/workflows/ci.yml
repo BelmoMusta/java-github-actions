@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   test-job:
-    name: TypeScript Tests
+    name: Test Job
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
