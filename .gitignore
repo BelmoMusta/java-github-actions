@@ -1,0 +1,17 @@
+frames
+*.iml
+*.iws
+*.ipr
+.idea
+target 
+output
+logs.txt
+/logs/
+.DS_Store
+
+.gradle
+build/
+logs
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/

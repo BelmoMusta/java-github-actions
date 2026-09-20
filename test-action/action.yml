@@ -1,0 +1,20 @@
+name: 'Java GitHub Actions'
+branding:
+  icon: activity
+  color: purple
+description:
+  'Executes an action using java code'
+author: 'Mustapha Belmokhtar'
+inputs:
+  test :
+    description: 'test input'
+    required: false
+    default: "000000"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Execute java code
+      run: |
+        java -cp java-github-actions-1.0.0-SNAPSHOT.jar:. src/main/java/test/main/MainTest.java
+      shell: bash
