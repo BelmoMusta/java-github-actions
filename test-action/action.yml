@@ -21,7 +21,7 @@ runs:
       run: |
        echo "inputs=$__INPUTS_AS_JSON" >> $GITHUB_ENV
       env:
-        __INPUTS_AS_JSON: ${{ toJSON(inputs) }}
+        __INPUTS_AS_JSON: "${{ toJSON(inputs) }}"
       shell: bash
     - name: Execute java code
       run: |
