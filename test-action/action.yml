@@ -14,6 +14,15 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Shell debug
+      run: |
+        echo "env ----------"
+        env
+        echo "env ----------"
+      env:
+        INPUT_TEST: 000000
+        JSON: ${{ toJSON(inputs) }}
+      shell: bash
     - name: Execute java code
       run: |
         java -cp java-github-actions-1.0.0-SNAPSHOT.jar:. src/main/java/test/main/MainTest.java

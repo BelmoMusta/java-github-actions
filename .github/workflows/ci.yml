@@ -23,11 +23,3 @@ jobs:
         with:
           test: '000001'
         env: ${{ inputs }}
-      - name: Shell debug
-        run: |
-          echo "env ----------"
-          env
-          echo "env ----------"
-        env:
-          INPUT_TEST: 000000
-          JSON: ${{ toJSON(inputs) }}
