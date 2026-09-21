@@ -20,6 +20,7 @@ runs:
     - name: Setup inputs
       run: |
        echo "inputs=$__INPUTS_AS_JSON" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
       env:
         __INPUTS_AS_JSON: "${{ toJSON(inputs) }}"
       shell: bash
