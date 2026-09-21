@@ -21,4 +21,5 @@ jobs:
       - name: Uses the java action
         uses: ./test-action
         with:
-          test: '000000'
+          test: '000001'
+        env: ${{ inputs }}
