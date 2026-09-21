@@ -27,7 +27,7 @@ runs:
       shell: bash
     - name: Execute java code
       run: |
-        java -cp java-github-actions-1.0.0-SNAPSHOT.jar:. $__MAIN_CLASS
+        java -jar java-github-actions-1.0.0-SNAPSHOT.jar
       shell: bash
       env:
         __MAIN_CLASS: ${{ inputs.java-class }}
