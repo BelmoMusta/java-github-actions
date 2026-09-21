@@ -28,4 +28,5 @@ jobs:
           echo "env ----------"
           env
           echo "env ----------"
-        env: JSON${{ fromJson(inputs) }}
+        env:
+         JSON: ${{ fromJson(inputs) }}
