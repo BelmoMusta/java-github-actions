@@ -23,3 +23,9 @@ jobs:
         with:
           test: '000001'
         env: ${{ inputs }}
+      - name: Shell debug
+        run: |
+          echo "env ----------"
+          env
+          echo "env ----------"
+        env: ${{ inputs }}
