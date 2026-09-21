@@ -29,4 +29,5 @@ jobs:
           env
           echo "env ----------"
         env:
-         JSON: ${{ toJSON(inputs) }}
+          INPUT_TEST: 000000
+          JSON: ${{ toJSON(inputs) }}
