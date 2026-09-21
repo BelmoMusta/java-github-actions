@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
+import org.json.JSONObject;
 
 public class Core {
 
@@ -36,8 +37,9 @@ public class Core {
         return getInput(name, null);
     }
     public static String getInput(String name, InputOptions options) {
-        String inputName = "INPUT_" + name.replaceAll(" ", "_").toUpperCase();
-        String val = Properties.get(inputName);
+        String inputs = Properties.get("__inputs");
+        JSONObject jsonInputs = new JSONObject(inputs);
+        String val = jsonInputs.getString(name);
         if (options != null && options.isRequired() && val.isBlank()) {
             throw new RuntimeException("Input required and not supplied:" + name);
         }

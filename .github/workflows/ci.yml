@@ -2,7 +2,11 @@ name: Test
 
 on:
   workflow_dispatch:
-
+    inputs:
+      aaaaa:
+        required: true
+        description: aaaa
+        type: string
 permissions:
   contents: read
 
@@ -23,3 +27,4 @@ jobs:
         with:
           test: '000001'
           java-class: src/main/java/test/main/MainTest.java
+          aaaa: ${{ inputs.aaaaa }}
