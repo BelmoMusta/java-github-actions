@@ -6,6 +6,9 @@ description:
   'Executes an action using java code'
 author: 'Mustapha Belmokhtar'
 inputs:
+  java-class:
+    description: "Main class"
+    required: true
   test :
     description: 'test input'
     required: false
@@ -14,16 +17,15 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Shell debug
+    - name: Setup inputs
       run: |
-        echo "env ----------"
-        env
-        echo "env ----------"
+       echo "inputs=$__INPUTS_AS_JSON" >> $GITHUB_ENV
       env:
-        INPUT_TEST: 000000
-        JSON: ${{ toJSON(inputs) }}
+        __INPUTS_AS_JSON: ${{ toJSON(inputs) }}
       shell: bash
     - name: Execute java code
       run: |
-        java -cp java-github-actions-1.0.0-SNAPSHOT.jar:. src/main/java/test/main/MainTest.java
+        java -cp java-github-actions-1.0.0-SNAPSHOT.jar:. $__MAIN_CLASS
       shell: bash
+      env:
+        __MAIN_CLASS: ${{ inputs.java-class }}
