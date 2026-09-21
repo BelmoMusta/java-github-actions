@@ -23,4 +23,3 @@ jobs:
         with:
           test: '000001'
           java-class: src/main/java/test/main/MainTest.java
-        env: ${{ inputs }}
