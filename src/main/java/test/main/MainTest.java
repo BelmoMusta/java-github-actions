@@ -5,8 +5,7 @@ import org.mustabelmo.java.githubactions.Properties;
 
 public class MainTest {
     public static void main(String[] args) {
-        String test = Core.getInput("test");
-        String inputs = Properties.get("inputs");
+        String inputs = Properties.get("__inputs");
         System.out.println("Inputs == " + inputs);
     }
 }
