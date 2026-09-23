@@ -19,6 +19,7 @@ runs:
   steps:
     - name: Setup inputs
       run: |
+        which jq
         echo "__inputs<<EOF" >> $GITHUB_ENV
         echo "$__INPUTS_AS_JSON" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV

@@ -20,13 +20,6 @@
             <version>20260814</version>
         </dependency>
     </dependencies>
-
-    <!--
-Source - https://stackoverflow.com/a/574650
-Posted by IAdapter, modified by community. See post 'Timeline' for change history
-Retrieved 2026-09-20, License - CC BY-SA 4.0
--->
-
     <build>
         <plugins>
             <plugin>
@@ -49,7 +42,7 @@ Retrieved 2026-09-20, License - CC BY-SA 4.0
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>org.mustabelmo.java.githubactions.Main</mainClass>
+                                    <mainClass>test.main.MainTest</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
