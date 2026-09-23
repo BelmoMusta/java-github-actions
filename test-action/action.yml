@@ -27,7 +27,7 @@ runs:
       shell: bash
     - name: Execute java code
       run: |
-        ./mvnw exec:java
+        ./mvnw clean install exec:java
       shell: bash
       env:
         __MAIN_CLASS: ${{ inputs.java-class }}
