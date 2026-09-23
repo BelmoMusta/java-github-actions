@@ -26,5 +26,5 @@ jobs:
         uses: ./test-action
         with:
           test: '000001'
-          java-class: src/main/java/test/main/MainTest.java
+          java-class: test.main.MainTest #the package
           aaaa: ${{ inputs.aaaaa }}

@@ -37,7 +37,7 @@ public class Core {
         return getInput(name, null);
     }
     public static String getInput(String name, InputOptions options) {
-        String inputs = Properties.get("__inputs");
+        String inputs = Properties.get("__INPUTS");
         JSONObject jsonInputs = new JSONObject(inputs);
         String val = jsonInputs.getString(name);
         if (options != null && options.isRequired() && val.isBlank()) {
