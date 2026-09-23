@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
 
 import java.util.Arrays;
 import java.util.List;

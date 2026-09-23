@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -8,7 +8,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 import java.util.UUID;
 
-import static org.mustabelmo.java.githubactions.Utils.toCommandValue;
+import static org.mustabelmo.java.githubactions.sdk.Utils.toCommandValue;
 
 public class FileCommand {
     public static void issueFileCommand(String command, String message) {

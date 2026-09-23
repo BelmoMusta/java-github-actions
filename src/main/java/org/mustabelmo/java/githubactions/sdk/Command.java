@@ -1,8 +1,6 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
 
 import java.util.Map;
-
-import static org.mustabelmo.java.githubactions.Utils.toCommandValue;
 
 public class Command {
     private static final String CMD_STRING = "::";
@@ -44,13 +42,13 @@ public class Command {
         return builder.toString();
     }
     private String escapeData(String s) {
-        return toCommandValue(s)
+        return Utils.toCommandValue(s)
                 .replaceAll("%", "%25")
                 .replaceAll("\r", "%0D")
                 .replaceAll("\n", "%0A");
     }
     private String escapeProperty(Object s) {
-        return toCommandValue(s)
+        return Utils.toCommandValue(s)
                 .replaceAll("%", "%25")
                 .replaceAll("\r", "%0D")
                 .replaceAll("\n", "%0A")

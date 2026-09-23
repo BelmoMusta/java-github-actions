@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -7,7 +7,7 @@ public class Index {
     public Index() {
     }
     public static void main(String[] args) {
-        String mainClass = Properties.get("__MAIN_CLASS");
+        final String mainClass = Properties.get("__MAIN_CLASS");
         Class<Action> aClass = null;
         Action action = null;
         try {

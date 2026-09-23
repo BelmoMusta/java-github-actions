@@ -1,4 +1,6 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
+
+import org.json.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -11,9 +13,7 @@ public class Utils {
         if (input instanceof String s){
             return s;
         }
-        return input.toString();
-
-        //  return "JSON.stringify(input)"; // TODO
+         return JSONObject.valueToString(input);
     }
 
     public static Map<String, Object> toCommandProperties(

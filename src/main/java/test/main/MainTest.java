@@ -1,7 +1,7 @@
 package test.main;
 
-import org.mustabelmo.java.githubactions.Action;
-import org.mustabelmo.java.githubactions.Core;
+import org.mustabelmo.java.githubactions.sdk.Action;
+import org.mustabelmo.java.githubactions.sdk.Core;
 
 public class MainTest implements Action {
 

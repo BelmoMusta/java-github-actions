@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
 
 public interface InputOptions {
     boolean isRequired();// TODO

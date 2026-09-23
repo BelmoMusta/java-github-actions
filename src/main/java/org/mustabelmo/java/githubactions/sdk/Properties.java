@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions;
+package org.mustabelmo.java.githubactions.sdk;
 
 import java.util.Map;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public class Properties {
     }
 
     public static String put(String name, String value) {
-        // TODO : set system properties
+        System.setProperty(name, value);
         return CORE_PROPERTIES.put(name, value);
     }
 }
