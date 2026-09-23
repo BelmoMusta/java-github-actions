@@ -28,7 +28,7 @@ runs:
       shell: bash
     - name: Execute java code
       run: |
-        ./mvnw clean install 2>/dev/null
+        ./mvnw clean install &>/dev/null
         java -jar target/java-github-actions-1.0.0-SNAPSHOT-jar-with-dependencies.jar
       shell: bash
       env:
