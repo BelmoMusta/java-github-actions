@@ -17,8 +17,8 @@ jobs:
       - name: Set version
         run: mvn versions:set -DnewVersion=${{ github.event.release.tag_name }}
       - name: Publish package
-        #run: mvn --batch-mode deploy -DskipTests -s settings.xml
-        run: ./mvnw install -s settings.xml
+        run: mvn --batch-mode deploy -DskipTests -s settings.xml
+        #run: ./mvnw install -s settings.xml
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
