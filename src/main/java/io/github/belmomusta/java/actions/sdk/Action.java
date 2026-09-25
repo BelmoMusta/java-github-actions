@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
 
 public interface Action {
     void run() throws Exception;

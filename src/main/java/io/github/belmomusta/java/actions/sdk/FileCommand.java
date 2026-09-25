@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -8,9 +8,9 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 import java.util.UUID;
 
-import static org.mustabelmo.java.githubactions.sdk.Utils.toCommandValue;
+import static io.github.belmomusta.java.actions.sdk.Utils.toCommandValue;
 
-public class FileCommand {
+class FileCommand {
     public static void issueFileCommand(String command, String message) {
         String filePath = Properties.get("GITHUB_" + command);
         if (filePath.isBlank()) {

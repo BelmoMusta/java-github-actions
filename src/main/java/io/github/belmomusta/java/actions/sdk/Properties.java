@@ -1,10 +1,10 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Properties {
+ class Properties {
     /**
      * Copy all the env variables
      */

@@ -1,10 +1,11 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
+
+import org.json.JSONObject;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
-import org.json.JSONObject;
 
 public class Core {
 

@@ -1,4 +1,4 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -11,7 +11,12 @@ public class Index {
         Class<Action> aClass = null;
         Action action = null;
         try {
-            aClass = (Class<Action>) Class.forName(mainClass);
+            Class temp = Class.forName(mainClass);
+            if (Action.class.isAssignableFrom(temp)) {
+                aClass = temp;
+            } else {
+                throw new RuntimeException(mainClass + " has to implement the '" + Action.class.getCanonicalName() +"' interface");
+            }
             Constructor<Action> constructor = aClass.getConstructor();
             action = constructor.newInstance();
         } catch (ClassNotFoundException

@@ -1,8 +1,8 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
 
 import java.util.Map;
 
-public class Command {
+class Command {
     private static final String CMD_STRING = "::";
     private final String command;
     private final Map<String, Object> properties;

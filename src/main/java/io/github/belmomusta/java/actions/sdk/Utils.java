@@ -1,11 +1,11 @@
-package org.mustabelmo.java.githubactions.sdk;
+package io.github.belmomusta.java.actions.sdk;
 
 import org.json.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Utils {
+ class Utils {
     public static String toCommandValue(Object input) {
         if (input == null) {
             return "";
