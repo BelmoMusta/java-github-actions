@@ -46,6 +46,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
+                                    <!-- Preserve this main class -->
                                     <mainClass>io.github.belmomusta.java.actions.sdk.Index</mainClass>
                                 </manifest>
                             </archive>
