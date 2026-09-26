@@ -26,5 +26,4 @@ jobs:
         uses: ./test-action
         with:
           test: '000001'
-          java-class: test.main.MainTest #the package
-          aaaa: ${{ inputs.aaaaa }}
+          java-class: "io.github.belmomusta.demo.MonAction"

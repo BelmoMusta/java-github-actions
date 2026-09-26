@@ -1,4 +1,4 @@
-name: 'Java GitHub Actions'
+name: 'Java GitHub Actions DEMO'
 branding:
   icon: activity
   color: purple
@@ -28,8 +28,9 @@ runs:
       shell: bash
     - name: Execute java code
       run: |
-        ./mvnw clean install &>/dev/null
-        java -jar target/java-github-actions-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+        VERSION=1.0.0 # todo unify this
+        ./mvnw clean install -Drevision=$VERSION&>/dev/null
+        java -jar target/java-github-actions-demo-$VERSION.jar
       shell: bash
       env:
         __INPUTS: ${{ steps.setup-inputs.outputs.__inputs }}
