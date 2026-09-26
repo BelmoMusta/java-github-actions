@@ -13,6 +13,10 @@ inputs:
     description: 'test input'
     required: false
     default: "000000"
+  flag:
+    description: 'boolean flag'
+    required: false
+    default: "false"
 
 runs:
   using: "composite"
